@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+  <string name="app_name">Intents</string>
+
+  <string name="activity_first">First Activity</string>
+  <string name="activity_second">Second Activity</string>
+  <string name="activity_third">Third Activity</string>
+  <string name="activity_web_view">WebView Activity</string>
+  <string name="activity_result">Result Activity</string>
+  <string name="activity_asked_for_result">Asked For Result Activity</string>
+
+  <string name="result_name">Name</string>
+  <string name="result_age">Age</string>
+  <string name="result_weight">Weight</string>
+  <string name="zero">0</string>
+  <string name="action_accept">Accept</string>
+  <string name="action_cancel">Cancel</string>
+
+</resources>

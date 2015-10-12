@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/background"
+              android:orientation="vertical"
+              android:padding="15dp">
+
+  <TableLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@null">
+
+    <TableRow>
+
+      <TextView
+        android:layout_weight="15"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:textColor="#ffffffff"
+        android:background="#FF38719B"
+        android:text="@string/result_name" />
+
+      <TextView
+        android:id="@+id/txtResultName"
+        android:layout_weight="24"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:textColor="#ff232323"
+        android:background="#FFCAC088"
+        android:text="@string/result_name" />
+
+    </TableRow>
+
+    <TableRow>
+
+      <TextView
+        android:layout_weight="15"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:textColor="#ffffffff"
+        android:background="#FF38719B"
+        android:text="@string/result_age" />
+
+      <TextView
+        android:id="@+id/txtResultAge"
+        android:layout_weight="24"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:textColor="#ff232323"
+        android:background="#FFCAC088"
+        android:text="@string/zero" />
+
+    </TableRow>
+
+    <TableRow>
+
+      <TextView
+        android:layout_weight="15"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:textColor="#ffffffff"
+        android:background="#FF38719B"
+        android:text="@string/result_weight" />
+
+      <TextView
+        android:id="@+id/txtResultWeight"
+        android:layout_weight="24"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:textColor="#ff232323"
+        android:background="#FFCAC088"
+        android:text="@string/zero" />
+
+    </TableRow>
+  </TableLayout>
+
+</LinearLayout>

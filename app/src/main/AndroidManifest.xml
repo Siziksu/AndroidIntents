@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.siziksu.intents"
+          android:installLocation="preferExternal">
+
+  <permission android:name="com.siziksu.intents.permission.MANIFEST" />
+
+  <uses-permission android:name="android.permission.CALL_PHONE" />
+  <uses-permission android:name="android.permission.INTERNET" />
+
+  <application
+    android:allowBackup="true"
+    android:icon="@drawable/ic_launcher"
+    android:label="@string/app_name"
+    android:theme="@style/AppTheme">
+    <activity
+      android:name=".ui.activity.MainActivity"
+      android:label="@string/app_name"
+      android:screenOrientation="portrait">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+        <category android:name="android.intent.category.LAUNCHER" />
+      </intent-filter>
+    </activity>
+    <activity
+      android:name=".ui.activity.FirstActivity"
+      android:label="@string/activity_first">
+      <intent-filter>
+        <action android:name="com.siziksu.intents.action.FIRST" />
+        <category android:name="android.intent.category.DEFAULT" />
+      </intent-filter>
+    </activity>
+    <activity
+      android:name=".ui.activity.SecondActivity"
+      android:label="@string/activity_second">
+      <intent-filter>
+        <action android:name="com.siziksu.intents.action.BOTH" />
+        <category android:name="android.intent.category.DEFAULT" />
+      </intent-filter>
+    </activity>
+    <activity
+      android:name=".ui.activity.ThirdActivity"
+      android:label="@string/activity_third">
+      <intent-filter>
+        <action android:name="com.siziksu.intents.action.BOTH" />
+        <category android:name="android.intent.category.DEFAULT" />
+      </intent-filter>
+    </activity>
+    <activity
+      android:name=".ui.activity.WebViewActivity"
+      android:label="@string/activity_web_view">
+      <intent-filter>
+        <action android:name="android.intent.action.VIEW" />
+        <action android:name="com.siziksu.intents.action.BROWSER" />
+
+        <data android:scheme="http" />
+        <category android:name="android.intent.category.DEFAULT" />
+      </intent-filter>
+    </activity>
+    <activity
+      android:name=".ui.activity.ResultActivity"
+      android:label="@string/activity_result">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+        <category android:name="android.intent.category.DEFAULT" />
+      </intent-filter>
+    </activity>
+    <activity
+      android:name=".ui.activity.AskedForResultActivity"
+      android:label="@string/activity_asked_for_result">
+    </activity>
+
+    <receiver
+      android:name=".data.receiver.PersonReceiver"
+      android:exported="false">
+    </receiver>
+
+    <receiver
+      android:name=".data.receiver.ManifestReceiver"
+      android:permission="com.siziksu.intents.permission.MANIFEST">
+      <intent-filter>
+        <action android:name="com.siziksu.intents.action.MANIFEST" />
+      </intent-filter>
+    </receiver>
+  </application>
+
+</manifest>
