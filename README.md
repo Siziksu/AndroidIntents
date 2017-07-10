@@ -1,5 +1,12 @@
 # AndroidIntents
-Usage examples of Android Intents.
+
+Example usages of Android Intents.
+
+## Screenshots
+
+![Screenshot](art/device-2017-07-10-151624.png)
+![Screenshot](art/device-2017-07-10-151655.png)
+![Screenshot](art/device-2017-07-10-151742.png)
 
 ## License
     Copyright 2015 Esteban Latre
