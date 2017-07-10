@@ -1,48 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent"
-              android:orientation="vertical"
-              android:background="@color/background"
-              android:padding="15dp">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/white">
 
-  <TextView
-    android:text="@string/activity_asked_for_result"
-    android:textColor="@color/text"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content" />
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:minHeight="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
 
-  <LinearLayout
-    android:layout_marginTop="10dp"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="horizontal">
+    <android.support.constraint.ConstraintLayout
+        android:layout_below="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="15dp">
 
-    <Button
-      android:id="@+id/buttonAccept"
-      android:textColor="@drawable/button_text"
-      android:textSize="14sp"
-      android:layout_weight="0.495"
-      android:layout_width="0dp"
-      android:layout_height="wrap_content"
-      android:background="@drawable/button"
-      android:minHeight="35dp"
-      android:text="@string/action_accept" />
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="338dp"
+            android:layout_height="wrap_content"
+            android:text="@string/activity_asked_for_result"
+            android:textSize="14sp"
+            android:textColor="@color/textColorPrimary"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="8dp" />
 
-    <Space
-      android:layout_weight="0.05"
-      android:layout_width="0dp"
-      android:layout_height="wrap_content" />
+        <Button
+            style="?android:attr/borderlessButtonStyle"
+            android:id="@+id/buttonAccept"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            app:layout_constraintEnd_toStartOf="@+id/buttonCancel"
+            app:layout_constraintTop_toBottomOf="@+id/text"
+            android:background="@drawable/button"
+            android:text="@string/action_accept"
+            android:textSize="14sp"
+            android:textColor="@drawable/button_text"
+            tools:layout_editor_absoluteX="178dp" />
 
-    <Button
-      android:id="@+id/buttonCancel"
-      android:textColor="@drawable/button_text"
-      android:textSize="14sp"
-      android:layout_weight="0.495"
-      android:layout_width="0dp"
-      android:layout_height="wrap_content"
-      android:minHeight="35dp"
-      android:background="@drawable/button"
-      android:text="@string/action_cancel" />
-  </LinearLayout>
-</LinearLayout>
+        <Button
+            style="?android:attr/borderlessButtonStyle"
+            android:id="@+id/buttonCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text"
+            android:background="@drawable/button"
+            android:text="@string/action_cancel"
+            android:textSize="14sp"
+            android:textColor="@drawable/button_text"
+            tools:layout_editor_absoluteX="281dp" />
+    </android.support.constraint.ConstraintLayout>
+</RelativeLayout>
